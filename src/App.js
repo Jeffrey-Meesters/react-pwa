@@ -1,25 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.sass';
+import Button from './components/Button';
 
 class App extends Component {
+  
+  clickHandler = () => {
+    console.log('hi');
+  }
+  
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <h1>Hi I'm still here!</h1>
+        <Button btnText="Click me!" btnClass="thisPage primaryBtn" btnFunction={this.clickHandler} />
       </div>
     );
   }
