@@ -17,7 +17,7 @@ const Button = ({ btnText, btnClass, btnFunction }) => {
 
 Button.propTypes = {
     // the Button requires a clickHandler
-    btnFunction: PropTypes.func.isRequired,
+    // btnFunction: can be non defined/empty
     // the Button requires text to show the function of the button
     btnText: PropTypes.string.isRequired,
     // the Button requires a class for the correct styling

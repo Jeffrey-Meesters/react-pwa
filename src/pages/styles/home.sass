@@ -1,3 +1,25 @@
 .home-page
     h1
         color: $accent-text
+    
+    .cta-wrapper
+        display: flex
+        justify-content: space-around
+        flex-direction: row
+        height: 65vh
+        align-items: center
+
+    .floating-cta
+        position: relative
+        height: 200px
+        width: 30%
+        border-radius: 5px
+
+        &.why
+            top: 0
+            
+        &.what
+            top: 20px
+
+        &.how
+            top: 40px
