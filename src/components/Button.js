@@ -9,7 +9,6 @@ import PropTypes from 'prop-types';
 // btnFunction is an onClick function callback which is defined in your component
 
 const Button = ({ btnText, btnClass, btnFunction }) => {
-    console.log(typeof btnFunction);
     return (
         <button className={ btnClass } onClick={btnFunction}> { btnText } </button>
     )

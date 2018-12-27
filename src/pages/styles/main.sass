@@ -3,9 +3,37 @@ body
     color: $main-text
     min-height: 100vh
 
+    .page-wrapper
+        min-height: 100vh
+        // overflow: hidden
+
     .Main
         display: flex
 
         .page
             width: 100%
-            padding: 0px 15px
+            min-height: 100vh
+
+        // Router transitions
+        .transition-group
+            position: relative
+
+        .route-section 
+            position: absolute
+            width: 100%
+            top: 100px
+            left: 0
+
+        .fade-enter
+            opacity: 0.01
+
+        .fade-enter.fade-enter-active
+            opacity: 1
+            transition: opacity 500ms ease-in
+
+        .fade-exit
+            opacity: 1
+
+        .fade-exit.fade-exit-active
+            opacity: 0.01
+            transition: opacity 500ms ease-in

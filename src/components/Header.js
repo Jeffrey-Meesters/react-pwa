@@ -10,7 +10,7 @@ const Main = () => {
                 <div className="nav-list">
                     <div className="nav-right">
                         <div><Link to='/'><FontAwesomeIcon icon="home" /></Link></div>
-                        <div><Link to='PageTwo'>page two</Link></div>
+                        <div><Link to='Products'>products</Link></div>
                     </div>
                 </div>
             </nav>

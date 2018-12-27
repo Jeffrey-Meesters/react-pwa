@@ -1,3 +1,46 @@
+@keyframes btn-why-slide
+    0%
+        top: 200vh
+        opacity: 0
+    50%
+        opacity: 0.3
+    90%
+        top: -10px          
+    100%
+        top: 0
+        opacity: 1
+
+@keyframes btn-what-slide
+    0%
+        top: 200vh
+        opacity: 0
+    50%
+        opacity: 0.3
+    90%
+        top: 10px
+    100%
+        top: 20px
+        opacity: 1
+
+@keyframes btn-how-slide
+    0%
+        top: 200vh
+        opacity: 0
+    50%
+        opacity: 0.3
+    90%
+        top: 30px        
+    100%
+        top: 40px
+        opacity: 1
+
+@keyframes scroller-fade-in
+    0%
+        opacity: 0
+    
+    100%
+        opacity: 1
+    
 .home-page
     h1
         color: $accent-text
@@ -6,20 +49,41 @@
         display: flex
         justify-content: space-around
         flex-direction: row
-        height: 65vh
+        height: 75vh
         align-items: center
 
-    .floating-cta
-        position: relative
-        height: 200px
-        width: 30%
-        border-radius: 5px
+        .btn-span
+            position: relative
+            height: 200px
+            width: 30%            
 
-        &.why
-            top: 0
+            .btn
+                border-radius: 5px
+                cursor: pointer
             
-        &.what
-            top: 20px
+            &#btn-how,
+            &#btn-what,
+            &#btn-why
+                opacity: 0
 
-        &.how
-            top: 40px
+            &.btn-slide-animation
+                &#btn-why
+                    animation: btn-why-slide 1s 1 ease-out forwards
+                    animation-delay: 0s
+                    
+                &#btn-what
+                    animation: btn-what-slide 1s 1 ease-out forwards
+                    animation-delay: 1s
+
+                &#btn-how
+                    animation: btn-how-slide 1s 1 ease-out forwards
+                    animation-delay: 2s
+
+    .croll-button
+        text-align: center
+        opacity: 0
+        animation: scroller-fade-in 1s 1 ease-out forwards
+        animation-delay: 5s
+    
+    .fa-angle-double-down
+        font-size: 25px
